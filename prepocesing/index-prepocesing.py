@@ -1,12 +1,11 @@
-from pathlib import Path
 from func_prepocesing import preprocess, load_and_clean
 
-BASE_DIR = Path(__file__).resolve().parent
+path ="Top pariwisata Bangkalan.csv"
 
 print("skrip jalan bg")
-df = load_and_clean(BASE_DIR / "Bukit jaddih.csv")
+df = load_and_clean(path)
 df["clean_text"] = df["text"].apply(preprocess)
 df = df.drop(columns=["text"]) 
-df.to_csv(BASE_DIR / "Bukit Jaddih (After Cleaning", index=False)
+df.to_csv("Top Pariwisata Bangkalan (Cleaning with stopword).csv", index=False)
 print("Done Preprocessingnya bang")
 

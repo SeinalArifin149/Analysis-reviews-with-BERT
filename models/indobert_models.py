@@ -8,7 +8,8 @@ from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 # ==============================
 # 1. LOAD & CLEAN DATA
 # ==============================
-file_path = "../Bukit Jaddih(Cleaning).csv"
+file_path = "Top Pariwisata Bangkalan (Cleaning).csv"
+# file_path = "Top Pariwisata Bangkalan (Cleaning with stopword).csv"
 df = pd.read_csv(file_path)
 
 print("Kolom dataset:", df.columns)
@@ -141,7 +142,7 @@ trainer.train()
 trainer.save_model("./model_sentiment_binary")
 tokenizer.save_pretrained("./model_sentiment_binary")
 
-print("\n💪 Model selesai dilatih!")
+print("\nModel selesai dilatih")
 
 # ==============================
 # 10. PREDICT FUNCTION

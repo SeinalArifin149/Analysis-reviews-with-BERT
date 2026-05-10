@@ -6,3 +6,6 @@ transformers
 accelerate>=1.1.0
 torch
 emoji
+bertopic
+scikit-learn
+nltk
